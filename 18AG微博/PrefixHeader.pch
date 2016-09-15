@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  18AG微博
+//
+//  Created by again on 16/8/4.
+//  Copyright © 2016年 again. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 2.获得RGB颜色
+#define AGColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define NSLogRect(rect) NSLog(@"%s x:%.4f,                     y:%.4f, w:%.4f, h:%.4f", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size. height)
+#define NSLogSize(size) NSLog(@"%s w:%.4f, h:%.4f", #size, size.width, size.height)
+#define NSLogPoint(point) NSLog(@"%s x:%.4f, y:%.4f", #point, point.x, point.y)
+
+#import "UIImage+MJ.h"
+
+#define AGLog(...) NSLog(__VA_ARGS__)
+
+
+#define AGPhotoW 70
+#define AGPhotoH 70
+#define AGPhotoMargin 10
+
+/**昵称的字体*/
+#define AGStatusNameFont [UIFont systemFontOfSize:15]
+/**时间的字体*/
+#define AGStatusTimeFont [UIFont systemFontOfSize:12]
+/**来源的字体*/
+#define AGStatusSourceFont AGStatusTimeFont
+/**正文的字体*/
+#define AGStatusContentFont [UIFont systemFontOfSize:13]
+
+/**被转发微博作者昵称的字体*/
+#define AGRetweetStatusNameFont AGStatusNameFont
+/**被转发微博正文的字体*/
+#define AGRetweetStatusContentFont AGStatusContentFont
+//cell的边框宽度
+#define AGStatusCellBorder 10
+
+//表格的边框宽度
+#define AGStatusTableBoder 8
+
+#define AGNOtificationCenter [NSNotificationCenter defaultCenter]
+
+#endif /* PrefixHeader_pch */
